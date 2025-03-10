@@ -12,7 +12,7 @@ Before you begin, ensure you have the following installed:
 - Docker Desktop
 - Docker Compose
 
-## Local Development with Docker
+## Local Deployment with Docker
 
 1. Clone the repository:
 ```bash
