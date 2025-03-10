@@ -1,6 +1,8 @@
 # Log Management System
 
-A web-based application that allows users to manage logs built with Django backend and React frontend. It has a REST API that serves data for the frontend to consume. The log data is saved to postgres database with columns such as timestamp, message, severity, and source. It has endpoint for performing full CRUD operations on logs. It has an endpoint for querying raw log data by date range, severity, or source, and also aggregate logs by the same parameters. It has also an action to download all logs or filtered logs as csv file.
+A web-based application that allows users to manage logs built with Django backend and React frontend. 
+For the backend, it has a REST API that serves data for the frontend to consume. The log data is saved to postgres database with columns such as timestamp, message, severity, and source. It has endpoint for performing full CRUD operations on logs. It has an endpoint for querying raw log data by date range, severity, or source, and also aggregate logs by the same parameters. It has also an action to download all logs or filtered logs as csv file.
+For the frontend, it has a Dashboard page which calls to the aggregate logs endpoint, with charts for visualizing endpoints and filter panel to filter logs. It has a Filter Logs page where it lists all the logs, allows you to filter them through a filter panel, and also allows to modifiy or delte logs instances by viewing details of an instance log. The create log allows to create new logs.
 
 ## Prerequisites
 
