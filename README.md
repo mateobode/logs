@@ -12,14 +12,20 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/mateobode/logs.git
+cd logs
 ```
 
 3. Build and start the containers in detached mode:
 ```bash
-docker-compose up --build -d
+docker compose up --build -d
 ```
+
+This will start all services:
+- Frontend: http://localhost:3000
+- Backend: http://localhost:8000
+- PostgreSQL: localhost:5432
+- Redis: localhost:6379
 
 4. After the container services are running, inside the backend service terminal execute these two commands:
 ```bash
@@ -32,17 +38,15 @@ python manage.py makemigrations
 python populate_db.py
 ```
 
-This will start all services:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:8000
-- PostgreSQL: localhost:5432
-- Redis: localhost:6379
-
 To stop the containers:
 ```bash
-docker-compose stop
+docker compose stop
 ```
 
+To remove the containers:
+```bash
+docker compose down
+```
 
 ## Project Structure
 
@@ -106,6 +110,7 @@ pip install requirements.txt
 5. Run migrations:
 ```bash
 python manage.py migrate
+python manage.py makemigrations
 ```
 
 6. Start the Django development server:
@@ -145,6 +150,8 @@ In the frontend directory:
 - `npm start` - Runs the React development server
 - `npm build` - Builds the app for production
 
+## [ATTENTION] Backend server and Frontend server must be running at the same time for the application to work!
+
 ## Docker Commands
 
 Useful Docker commands for development:
@@ -161,9 +168,6 @@ docker-compose logs <service-name>
 
 # Rebuild a specific service
 docker-compose up -d --build <service-name>
-
-# Stop and remove all containers
-docker-compose down
 
 # Stop and remove all containers including volumes
 docker-compose down -v
