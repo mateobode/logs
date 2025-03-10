@@ -5,7 +5,7 @@ A web-based application that allows users to manage logs built with Django backe
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
-- Docker
+- Docker Desktop
 - Docker Compose
 
 ## Local Development with Docker
