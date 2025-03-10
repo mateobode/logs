@@ -21,6 +21,17 @@ cd <project-directory>
 docker-compose up --build -d
 ```
 
+4. After the container services are running, inside the backend service terminal execute these two commands:
+```bash
+python manage.py migrate
+python manage.py makemigrations
+```
+
+5. To populate the database with logs instances, inside backend serivce terminal execute script:
+```bash
+python populate_db.py
+```
+
 This will start all services:
 - Frontend: http://localhost:3000
 - Backend: http://localhost:8000
